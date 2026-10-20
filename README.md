@@ -18,16 +18,15 @@ brew upgrade tinycode
 
 An open-source AI coding assistant that runs air-gapped against your own LLMs — Ollama, vLLM, LM Studio, or any OpenAI-compatible endpoint. No cloud accounts, no API keys, no data leaving your network.
 
-- Terminal UI, web UI, desktop app, and IDE integration
-- 24 built-in agents, 9 skills, plugin SDK
-- [Getting started guide](https://bobbyjohnstx.github.io/tinycode.html)
+- Terminal UI, web UI, and IDE integration (ACP)
+- 23 built-in agents, 7 skills, 32 plugins (plugin SDK included)
+- Single Go binary, no runtime dependencies
 
 ## Ecosystem
 
 | Project | Description |
 |---------|-------------|
-| [tinycode](https://github.com/bobbyjohnstx/tinycode) | Core server, TUI, web UI, desktop app, agents, skills, tools |
-| [tinycode-plugins](https://github.com/bobbyjohnstx/tinycode-plugins) | 37 plugins — Red Hat integrations and general-purpose |
+| [tinycode](https://github.com/bobbyjohnstx/tinycode) | Core binary — server, TUI, web UI, agents, skills, tools, plugins |
 | [tinycode-container](https://github.com/bobbyjohnstx/tinycode-container) | OCI container image for Kubernetes and OpenShift |
 | [tinycode-operator](https://github.com/bobbyjohnstx/tinycode-operator) | Kubernetes Operator for OpenShift |
 | [homebrew-tap](https://github.com/bobbyjohnstx/homebrew-tap) | This repo — Homebrew formula |
