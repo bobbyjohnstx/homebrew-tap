@@ -1,26 +1,26 @@
 class Tinycode < Formula
   desc "Local-first, model-agnostic AI coding assistant — single binary, no runtime dependencies"
   homepage "https://github.com/bobbyjohnstx/tinycode"
-  version "2.6.1"
+  version "2.7.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/bobbyjohnstx/tinycode/releases/download/v2.6.1/tinycode-darwin-arm64.tar.gz"
-      sha256 "aa075d197d46750b7a622ec9c416ed3a79c30f4fa404cfb1173ad3258c49dee3"
+      url "https://github.com/bobbyjohnstx/tinycode/releases/download/v2.7.0/tinycode-darwin-arm64.tar.gz"
+      sha256 "e95f4c943f43b14cd863f141c9ad87f672113471922e2efbd3f28b8c7cf1627c"
     else
-      url "https://github.com/bobbyjohnstx/tinycode/releases/download/v2.6.1/tinycode-darwin-amd64.tar.gz"
-      sha256 "50cc7d489beb9f97d70af413f111b070418acaf3e9afa8084dcc4ece934914a0"
+      url "https://github.com/bobbyjohnstx/tinycode/releases/download/v2.7.0/tinycode-darwin-amd64.tar.gz"
+      sha256 "2ea8388030bd42112a214e6e039b64f854eb1c215856f2cc85ec04873cfb68de"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/bobbyjohnstx/tinycode/releases/download/v2.6.1/tinycode-linux-arm64.tar.gz"
-      sha256 "8608071345d84f8448f6452e22db6a9694f287b70f5710678c9313a438972c3b"
+      url "https://github.com/bobbyjohnstx/tinycode/releases/download/v2.7.0/tinycode-linux-arm64.tar.gz"
+      sha256 "59e109050161ea4fd211c847474f82dc35004f9ed46b2a9839c2cfbfe1f050d8"
     else
-      url "https://github.com/bobbyjohnstx/tinycode/releases/download/v2.6.1/tinycode-linux-amd64.tar.gz"
-      sha256 "440f9c6c9e09118bf0a9f483137386493a7a0db1cf0ed9c5e25ea477f5981760"
+      url "https://github.com/bobbyjohnstx/tinycode/releases/download/v2.7.0/tinycode-linux-amd64.tar.gz"
+      sha256 "b91909a564dd2f4ee1225bd03fe7f40cf1f6e5bb4892060bce11688067f5c117"
     end
   end
 
