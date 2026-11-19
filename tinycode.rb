@@ -7,20 +7,20 @@ class Tinycode < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/bobbyjohnstx/tinycode/releases/download/v2.10.0/tinycode-darwin-arm64.tar.gz"
-      sha256 "a2411f34220faf069c5b4dd8e97bb306af266b6bb2b020eb41973606662eb9a8"
+      sha256 "6675700ededaa5e46f7a071eb47a3dd14a2ef22581d98067db4e07d19f57c272"
     else
       url "https://github.com/bobbyjohnstx/tinycode/releases/download/v2.10.0/tinycode-darwin-amd64.tar.gz"
-      sha256 "189f4a3bf3dd3d64547321e1cf36237470e4443ffc9263e1343655dc14ee53e4"
+      sha256 "0caf36c7b8e1baa01384f3c6c8faecd2f35eb8fb5c99478f801ad93265c84d4c"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/bobbyjohnstx/tinycode/releases/download/v2.10.0/tinycode-linux-arm64.tar.gz"
-      sha256 "c8e3c9704fa0c11a5557a37f4231275cae88f84cd998f8f4fc8270c20a2cd9e1"
+      sha256 "cd86895247d3a6f38f52c6c4a0a3a20a91f900f59a1270fda3367d3bef77a3cc"
     else
       url "https://github.com/bobbyjohnstx/tinycode/releases/download/v2.10.0/tinycode-linux-amd64.tar.gz"
-      sha256 "6484e938cd4355340d333c32221b515ebce379f3cb5839b1e8d37438c05e7876"
+      sha256 "8bf0cbd8fbee1f13934f1886d2d3c913c0bb761b5941affa8afe0d950625e7cc"
     end
   end
 
