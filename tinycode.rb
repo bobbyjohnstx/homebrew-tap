@@ -7,25 +7,32 @@ class Tinycode < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/bobbyjohnstx/tinycode/releases/download/v2.10.0/tinycode-darwin-arm64.tar.gz"
-      sha256 "6675700ededaa5e46f7a071eb47a3dd14a2ef22581d98067db4e07d19f57c272"
+      sha256 "13376797fbc76490137a4a9e5769a8f26b3cc3df7de42b7c46cb8c31c89078c2"
     else
       url "https://github.com/bobbyjohnstx/tinycode/releases/download/v2.10.0/tinycode-darwin-amd64.tar.gz"
-      sha256 "0caf36c7b8e1baa01384f3c6c8faecd2f35eb8fb5c99478f801ad93265c84d4c"
+      sha256 "a816a92d0e3d7cb76878b1211890734429bc50b9ff6bfc73817fb965f8d44a87"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/bobbyjohnstx/tinycode/releases/download/v2.10.0/tinycode-linux-arm64.tar.gz"
-      sha256 "cd86895247d3a6f38f52c6c4a0a3a20a91f900f59a1270fda3367d3bef77a3cc"
+      sha256 "169ebdbe77357d530046ac49d8a948207f5e95f334cbb96c76aee5a0daabcbc2"
     else
       url "https://github.com/bobbyjohnstx/tinycode/releases/download/v2.10.0/tinycode-linux-amd64.tar.gz"
-      sha256 "8bf0cbd8fbee1f13934f1886d2d3c913c0bb761b5941affa8afe0d950625e7cc"
+      sha256 "b332579aaadbd321f95b04673593a41b478c12644185eab20f9c0a4c489e9b94"
     end
   end
 
   def install
-    bin.install "tinycode"
+    # Tarballs extract to a subdirectory (e.g. tinycode-darwin-arm64/tinycode)
+    if File.exist?("tinycode")
+      bin.install "tinycode"
+    else
+      Dir.glob("tinycode-*/tinycode").each do |f|
+        bin.install f
+      end
+    end
   end
 
   test do
